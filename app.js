@@ -27,9 +27,13 @@ var form,
 	outputPhone,
 	addressWrapper,
 
+//array of contacts
+	contactsArray;	
+
 /*
- -------------Fetching elements from the DOM---------------
+ -------------Fetching/Instantiating elements from the DOM---------------
 */
+
 //form inputs 
 form = $('#form-wrapper');
 firstName = $('#firstName');
@@ -40,6 +44,7 @@ city = $('#city');
 state = $('#state');
 zipCode = $('#zipCode');
 submitBtn = $('#submit-btn');
+formControl = $('.form-control')
 
 // outPut contact
 previousContacts = $('#previous-contacts');
@@ -47,6 +52,10 @@ outputName = $('#print-name');
 outputLastName = $('#print-last-name');
 outputPhone = $('#print-phone');
 addressWrapper = $('#address-wrapper');
+
+//Array of Contacts
+
+contactsArray = [];
 
 // GOAL : SEPARATION OF CONCERNS
 
@@ -76,17 +85,27 @@ Contact.prototype.address = function(){
  // fetch DOM elements 
  // contain value of the instance of Contact . 
 
-submitBtn.click(function(e){
-	alert('We are Awesome!!');
-	e.preventDefault;
-	populateItem(firstName.val(), last);
-	 
-});
+form.submit(function(e){
+	e.preventDefault();
+	console.log(firstName.val());
+	// populateItem(firstName.val(), last);
+	contactsArray.push(new Contact(firstName.val(), lastName.val(), phoneNumber.val(), street.val(), city.val(), state.val(), zipCode.val()));
+	console.log(contactsArray);
+		//Input values
+$('.form-control').val('');
 
-function populateItem (item1) {
-	var item1 = new Contact;
-	arrayofPeople.push(item1)
-},
+});
+//push to array
+//array.length
+// function createContact(firstName, lastName, phoneNumber, street, city, state, zipCode) {
+// 	this.firstName = 
+// }
+
+
+// function populateItem (item1) {
+// 	var item1 = new Contact;
+// 	arrayofPeople.push(item1)
+// }
 
 
 
@@ -100,7 +119,7 @@ justin = Object
 arrayofPeople = [yoli, justin, ...]
 
 on clink on link we get : arrayofPeople[0];
-
+p
 */
 
 
