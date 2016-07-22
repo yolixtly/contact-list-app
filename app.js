@@ -84,32 +84,29 @@ Contact.prototype.address = function(){
 //STEP 2 : Every input on HTMl will populate a new instance of Contact Object 
  // fetch DOM elements 
  // contain value of the instance of Contact . 
-
 form.submit(function(e){
 	e.preventDefault();
 	console.log(firstName.val());
-	// populateItem(firstName.val(), last);
+	// Create new Contact and push it to our array of Contacts 
 	contactsArray.push(new Contact(firstName.val(), lastName.val(), phoneNumber.val(), street.val(), city.val(), state.val(), zipCode.val()));
 	console.log(contactsArray);
-		//Input values
-$('.form-control').val('');
+	//Empty Input values
+	formControl.val('');
 
 });
-//push to array
-//array.length
-// function createContact(firstName, lastName, phoneNumber, street, city, state, zipCode) {
-// 	this.firstName = 
-// }
+
+ // STEP 3: On Click we create a new object and atach a link to the page 
+
+ 
 
 
-// function populateItem (item1) {
-// 	var item1 = new Contact;
-// 	arrayofPeople.push(item1)
-// }
+// STEP 4 : Add Form Validations 
+
+//STEP 5 : Add behavior on links to update right side of the page : whichs is 
+// the contact we want see. Use a form for this. 
 
 
 
-// how do we store a new Contact???? What Data Type?? 
 
 /*
 
@@ -121,15 +118,4 @@ arrayofPeople = [yoli, justin, ...]
 on clink on link we get : arrayofPeople[0];
 p
 */
-
-
- // STEP 3: On Click we create a new object and atach a link to the page 
-
-
-// STEP 4 : Add Form Validations 
-
-//STEP 5 : Add behavior on links to update right side of the page : whichs is 
-// the contact we want see. Use a form for this. 
-
-
 
