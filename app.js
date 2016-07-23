@@ -28,7 +28,10 @@ var form,
 	addressWrapper,
 
 //array of contacts
-	contactsArray;	
+	contactsArray,	
+
+// contacts List Links
+	listContacts;
 
 /*
  -------------Fetching/Instantiating elements from the DOM---------------
@@ -54,8 +57,10 @@ outputPhone = $('#print-phone');
 addressWrapper = $('#address-wrapper');
 
 //Array of Contacts
-
 contactsArray = [];
+
+//List contacts Links
+listContacts = $('#contacts-list');
 
 // GOAL : SEPARATION OF CONCERNS
 
@@ -86,17 +91,38 @@ Contact.prototype.address = function(){
  // contain value of the instance of Contact . 
 form.submit(function(e){
 	e.preventDefault();
-	console.log(firstName.val());
 	// Create new Contact and push it to our array of Contacts 
 	contactsArray.push(new Contact(firstName.val(), lastName.val(), phoneNumber.val(), street.val(), city.val(), state.val(), zipCode.val()));
-	console.log(contactsArray);
 	//Empty Input values
 	formControl.val('');
+	//Apends the link to the contact just created
+	var currentContact = contactsArray[contactsArray.length - 1];
+	renderContact(currentContact.firstName + ' ' + currentContact.lastName);
 
 });
 
  // STEP 3: On Click we create a new object and atach a link to the page 
-
+function renderContact(contact){
+	var nameCase = prettyName(contact);
+	var newContact = '<li><span class="contact-link">' + nameCase + '</span></li>';
+	listContacts.append(newContact);
+}
+// Prettify Input Fields 
+function prettyName(str) {
+	// will split the string delimited by space into an array of words
+     str = str.toLowerCase().split(' '); 
+ 	// str.length holds the number of occurrences of the array..
+     for(var i = 0; i < str.length; i++){   
+    	// splits the array occurrence into an array of letters
+          str[i] = str[i].split('');  
+        // converts the first occurrence of the array to uppercase                  
+          str[i][0] = str[i][0].toUpperCase();  
+        // converts the array of letters back into a word.        
+          str[i] = str[i].join('');                   
+     }
+      //converts the array of words back to a sentence.
+     return str.join(' ');                             
+}
 
 // STEP 4 : Add Form Validations 
 

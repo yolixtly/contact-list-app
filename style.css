@@ -1,6 +1,30 @@
 .single-line {
-	display: inline-block;
+	display: inline-block; 
+	width: 7em;
+	text-align: right;
+	margin-right: 1em;
+	font-weight: bold;
+	// border: 1px solid;
 }
-#address-wrapper {
+#address-wrapper, #contacts-list {
 	list-style: none;
+}
+#contact-wrapper {
+	padding-left: 8em;
+}
+#title-name {
+	padding-bottom: 0.5em;
+}
+#list-wrapper {
+	padding-left: 4em;
+}
+li {
+	font-size: 1.1em;
+	padding-bottom: 0.5em;
+}
+#submit-btn {
+	// margin-left: 20em; 
+    padding: 0.5em;
+    width: 8em;
+    font-size: 1.2em;
 }
