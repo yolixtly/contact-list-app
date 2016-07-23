@@ -1,3 +1,8 @@
+body {
+	background-color: #f0f0f0;
+	color: purple;
+	font-size: 1.7em;
+}
 .single-line {
 	display: inline-block; 
 	width: 7em;
@@ -10,10 +15,11 @@
 	list-style: none;
 }
 #contact-wrapper {
-	padding-left: 8em;
+	padding-left: 5em;
 }
 #title-name {
 	padding-bottom: 0.5em;
+	color: #25ca92;
 }
 #list-wrapper {
 	padding-left: 4em;
@@ -27,4 +33,18 @@ li {
     padding: 0.5em;
     width: 8em;
     font-size: 1.2em;
+}
+hr {
+	border: none;
+	background-color: #935f9c;
+	height: 0.3em;
+}
+#submit-btn{
+    background-color: #935f9c;
+    outline: none;
+    border: none;
+
+}
+a {
+	color: #25ca92;
 }
