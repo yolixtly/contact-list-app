@@ -44,7 +44,7 @@ city = $('#city');
 state = $('#state');
 zipCode = $('#zipCode');
 submitBtn = $('#submit-btn');
-formControl = $('.form-control')
+formControl = $('.form-control');
 
 // outPut contact
 previousContacts = $('#previous-contacts');
@@ -96,8 +96,6 @@ form.submit(function(e){
 });
 
  // STEP 3: On Click we create a new object and atach a link to the page 
-
- 
 
 
 // STEP 4 : Add Form Validations 
