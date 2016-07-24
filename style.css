@@ -1,6 +1,57 @@
-.single-line {
-	display: inline-block;
+body {
+	background-color: #f0f0f0;
+	color: purple;
+	font-size: 1.7em;
 }
-#address-wrapper {
+.single-line {
+	display: inline-block; 
+	width: 7em;
+	text-align: right;
+	margin-right: 1em;
+	font-weight: bold;
+	// border: 1px solid;
+}
+#address-wrapper, #contacts-list, #alt-address-wrapper{
 	list-style: none;
+	
+}
+#contact-wrapper {
+	padding-left: 5em;
+}
+#title-name {
+	padding-bottom: 0.5em;
+	color: #25ca92;
+}
+#list-wrapper {
+	padding-left: 4em;
+}
+li {
+	font-size: 1.1em;
+	padding-bottom: 0.5em;
+}
+.button {
+	/*// margin-left: 20em; */
+    padding: 0.5em;
+    width: 8em;
+    font-size: 1.2em;
+}
+hr {
+	border: none;
+	background-color: #935f9c;
+	height: 0.3em;
+}
+.button {
+    background-color: #935f9c;
+    outline: none;
+    border: 1px, gray, solid;
+
+}
+a {
+	color: #25ca92;
+}
+#second-phone-input {
+	display: none;
+}
+.alt-address {
+	display: none;
 }
